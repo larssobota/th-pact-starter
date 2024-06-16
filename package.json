@@ -1,0 +1,25 @@
+{
+  "name": "th-pact-demo",
+  "version": "1.0.0",
+  "description": "PACT Demo - Testverfahren komplexer Sofwaresysteme",
+  "main": "index.js",
+  "scripts": {
+    "run:consumer": "node consumer/main.js",
+    "run:provider": "node provider/main.js",
+    "test:consumer": "rimraf ./pacts && mocha consumer/*.spec.js",
+    "test:provider": "node provider/providerVerification.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pact-foundation/pact": "^12.5.0",
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "rimraf": "^5.0.7"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
